@@ -1,0 +1,184 @@
+/* Wrapper keseluruhan konten */
+.full-content{
+    background-color: #f8f4ee;
+    padding: 2rem;
+}
+.back-button {
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #8B4513; /* warna coklat */
+    border-radius: 50%;
+    text-decoration: none;
+    color: #8B4513;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.back-button:hover {
+    background-color: #8B4513;
+    color: white;
+}
+
+/* Judul kategori */
+h1 {
+    text-align: center;
+    font-family: 'Playfair Display';
+    font-size: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Grid produk */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* default: 5 kolom */
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: #f8f4ee;
+    justify-content: start; /* posisi ke kiri */
+}
+
+.product-category{
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #6c757d; /* abu-abu lembut */
+}
+.product-name {
+    font-weight: 600;
+    color: #4b2e1a;  /* lebih netral, coklat kopi */
+    font-size: 15px;
+    margin-bottom: 0.25rem;
+}
+.price-rate{
+    display: flex;
+    justify-content: space-between; /* Bikin elemen kiri dan kanan menjauh */
+    align-items: center; 
+}
+.product-price {
+    font-weight: bold;
+    color: #4b2e1a; /* seragam dengan judul */
+    font-size: 13px;
+}
+
+.product-rate {
+    font-style: italic;
+    color: #999;
+    font-size: 12px;
+}
+
+
+/* Kartu produk yang dibungkus dengan tag <a> */
+.product-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.2s ease;
+    text-decoration: none;
+    color: #333 !important;
+    width: 100%;  /* akan ikut lebar kolom grid */
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* Hilangkan garis bawah pada link <a> */
+.product-card a {
+    text-decoration: none;   /* Pastikan tidak ada garis bawah pada link */
+    color: inherit;          /* Warna teks mengikuti warna parent */
+}
+
+/* Efek hover pada card */
+.product-card:hover {
+    transform: translateY(-5px);
+    text-decoration: none ; /* Pastikan garis bawah tidak muncul saat hover */
+}
+
+/* Styling gambar pada produk */
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Styling teks pada produk */
+.product-card p {
+    margin: 0.3rem 0;
+}
+
+.list-product{
+    background-color: rgb(252, 234, 227);
+}
+
+/* untuk tulisan yang kelebihan */
+.card-description {
+    font-size: 13px;
+    color: #6c757d; /* abu-abu lembut */
+    font-style: italic;
+    line-height: 1.4em;
+    max-height: 2.8em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    margin-bottom: 0.5rem;
+}
+
+/* untuk standarisasi ukuran image */
+.card-image-wrapper {
+    width: 100%;
+    height: 220px; /* tinggi tetap */
+    overflow: hidden;
+    position: relative;
+    background: #f5f5f5;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;        /* crop gambar dengan rapi */
+    object-position: center;  /* fokus tengah gambar */
+    display: block;
+}
+
+@media (max-width: 1400px) {
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media (max-width: 1150px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 850px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr); /* tetap 3 per baris */
+    }
+    .product-card {
+        width: 100%; /* biarkan mengecil mengikuti kolom */
+        max-width: unset;
+        min-width: unset;
+        height: auto; /* biar fleksibel */
+    }
+}
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* terakhir jadi 2 */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

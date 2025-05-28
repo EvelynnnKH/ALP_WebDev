@@ -1,0 +1,280 @@
+.button-container {
+    background-color: #ff9100;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+    display: inline-block;
+}
+/* ========== LAYOUT UTAMA: 2 KOLOM ========== */
+.main-content {
+    display: flex;
+    /* gap: 1rem; */
+    padding: 2rem;
+}
+
+/* ========== SIDEBAR KATEGORI ========== */
+.sidebar {
+    flex: 0 0 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.button-container {
+    background-color: #ff9100;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+    display: inline-block;
+    margin: 2rem;
+}
+/* ========== LAYOUT UTAMA: 2 KOLOM ========== */
+.main-content {
+    display: flex;
+    /* gap: 1rem; */
+    padding: 2rem;
+    background-color:  #f8f4ee; 
+}
+
+/* ========== SIDEBAR KATEGORI ========== */
+.sidebar {
+    flex: 0 0 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.category-card {
+    min-width: 100px;
+    min-height: 20px;
+    background-color:#b1a59b;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    transition: transform 0.2s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-4px);
+    background-color: rgb(231, 177, 164);
+}
+
+/* Hapus category-scroll horizontal lama */
+.category-scroll {
+    display: none;
+}
+.product-grid {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 produk per baris */
+    gap: 1.5rem;
+    padding: 2rem;
+    justify-items: start;
+    background-color: #f8f4ee;
+    
+}
+.product-category{
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #000000; /* abu-abu lembut */
+}
+.product-name {
+    font-weight: 600;
+    color: #4b2e1a;  /* lebih netral, coklat kopi */
+    font-size: 15px;
+    margin-bottom: 0.25rem;
+}
+.price-rate{
+    display: flex;
+    justify-content: space-between; /* Bikin elemen kiri dan kanan menjauh */
+    align-items: center; 
+}
+.product-price {
+    font-weight: bold;
+    color: #4b2e1a; /* seragam dengan judul */
+    font-size: 13px;
+}
+
+.product-rate {
+    font-style: italic;
+    color: #999;
+    font-size: 12px;
+}
+
+/* Kartu produk yang dibungkus dengan tag <a> */
+.product-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.2s ease;    
+    text-decoration: none;  /* Hilangkan garis bawah pada card */
+    color: #333 !important;   
+    width: 220px;
+    height: 400px; /* atur tinggi tetap agar semua card seragam */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;     
+}
+
+/* Hilangkan garis bawah pada link <a> */
+.product-card a {
+    text-decoration: none;   /* Pastikan tidak ada garis bawah pada link */
+    color: inherit;          /* Warna teks mengikuti warna parent */
+}
+
+/* Efek hover pada card */
+.product-card:hover {
+    transform: translateY(-5px);
+    text-decoration: none ; /* Pastikan garis bawah tidak muncul saat hover */
+}
+
+/* Styling gambar pada produk */
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Styling teks pada produk */
+.product-card p {
+    margin: 0.3rem 0;
+}
+
+.list-product{
+    background-color: #f8f4ee;
+}
+
+/* untuk tulisan yang kelebihan */
+.card-description {
+    font-size: 13px;
+    color: #6c757d; /* abu-abu lembut */
+    font-style: italic;
+    line-height: 1.4em;
+    max-height: 2.8em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    margin-bottom: 0.5rem;
+}
+
+/* untuk standarisasi ukuran image */
+.card-image-wrapper {
+    width: 100%;
+    height: 220px; /* tinggi tetap */
+    overflow: hidden;
+    position: relative;
+    background: #f5f5f5;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;        /* crop gambar dengan rapi */
+    object-position: center;  /* fokus tengah gambar */
+    display: block;
+}
+
+@media (max-width: 1400px) {
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 produk per baris */
+    }
+}
+/* Responsif untuk tablet */
+@media (max-width: 1185px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 produk per baris */
+    }
+}
+
+/* Responsif untuk tablet dan mobile kecil */
+@media (max-width: 990px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 produk per baris */
+    }
+
+    .product-card {
+        width: 100%; /* biar otomatis menyesuaikan dengan kolom */
+        height: 360px; /* sedikit lebih kecil agar pas */
+        padding: 0.75rem;
+    }
+
+    .card-image-wrapper {
+        height: 180px; /* tinggi gambar lebih kecil */
+    }
+
+    .product-name {
+        font-size: 12px;
+    }
+
+    .product-price {
+        font-size: 10px;
+    }
+
+    .product-rate {
+        font-size: 10px;
+    }
+
+    .card-description {
+        font-size: 10px;
+        max-height: 2.4em;
+    }
+}
+/* Tombol toggle untuk kategori (mobile) */
+.category-toggle {
+    display: none;
+    background-color: #ff9100;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+/* Bungkus kategori yang akan disembunyikan */
+.category-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+@media (max-width: 665px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        flex: 1 1 100%;
+        order: -1; /* Tampilkan di atas produk */
+        margin-bottom: 1rem;
+    }
+
+    .category-toggle {
+        display: block;
+    }
+
+    .category-list-wrapper {
+        display: none;
+    }
+
+    .category-list-wrapper.show {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

@@ -1,0 +1,149 @@
+.product-detail-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    gap: 2rem;
+    align-items: flex-start;
+    background-color:#f8f4ee;
+}
+
+/* .back-container{
+    background-color: rgb(252, 234, 227);
+    padding: 2rem;
+} */
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #8B4513; /* warna coklat */
+    border-radius: 50%;
+    text-decoration: none;
+    color: #8B4513;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.back-button:hover {
+    background-color: #8B4513;
+    color: white;
+}
+.product-image {
+    width: 450px;
+    height: 450px;
+    overflow: hidden; /* penting untuk crop */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ini yang bikin crop */
+    object-position: center; /* crop bagian tengah */
+}
+
+.product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-top:30px;
+    gap: 0.25rem;
+}
+
+.product-name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.product-price {
+    font-size: 40px;
+    color: #5c3c1d;
+    font-weight: bold;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.qty-btn {
+    background-color: #ddd;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.quantity-selector input[type="text"] {
+    width: 50px; /* Sesuaikan lebar kotak */
+    height: 30px; /* Sesuaikan tinggi kotak */
+    text-align: center;
+    padding: 0.2rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Pastikan padding dan border tidak menambah ukuran */
+}
+    .action-buttons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .action-buttons button{
+        min-width: 150px;
+        max-width: 150px;
+        max-height: 50px;
+    }
+
+    .add-to-wishlist-btn {
+        background-color: #967855;
+        color: #ffffff;
+        padding: 0rem 1.5rem;
+        border: none;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+    }
+    .edit-product-btn{
+        background-color: #967855;
+        color: #ffffff;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+    }
+
+    .add-to-wishlist-btn:hover, .edit-product-btn:hover {
+        background-color: #ce9f6a;
+    }
+
+    .add-to-cart-btn, .delete-product-btn {
+        background-color: #5c3c1d; 
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .add-to-cart-btn:hover, .delete-product-btn:hover {
+        background-color: rgb(169, 109, 48); 
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
